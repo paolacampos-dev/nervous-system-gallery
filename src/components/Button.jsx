@@ -1,7 +1,7 @@
  function ChooseTopic({theTopic, chTopic})    {
         return(
         <>
-        <button onClick={() => chTopic(theTopic)}>{theTopic}</button>
+        <button onClick={() => chTopic(theTopic)}>{theTopic}</button>  
         </>
     )
 }

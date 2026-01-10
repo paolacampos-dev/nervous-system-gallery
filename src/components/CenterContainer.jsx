@@ -1,4 +1,4 @@
-function CenterContainer({ selected, customTitles })   {
+function CenterContainer({ selected })   {
     return(
 <div className="center">
             {selected ? (
@@ -8,7 +8,7 @@ function CenterContainer({ selected, customTitles })   {
                     src={selected.full}
                     alt={selected.title}
                 />
-                <p className="center-title">{customTitles[selected.title]}
+                <p className="center-title">{selected.displayTitle}
                 </p>
             </div>
             ) : (
