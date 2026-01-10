@@ -1,4 +1,4 @@
-export default function CenterContainer({ selected, customTitles })   {
+function CenterContainer({ selected, customTitles })   {
     return(
 <div className="center">
             {selected ? (
@@ -17,3 +17,4 @@ export default function CenterContainer({ selected, customTitles })   {
         </div>
     )
 }
+export default CenterContainer;

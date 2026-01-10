@@ -1,6 +1,6 @@
-export default function SideContainer({ images, onSelect, customTitles, side })    {
+function SideContainer({ images, onSelect, customTitles, side })    {
     return (
-        <div className={`side ${side}`}>
+        <div className={side}>
             {images.map(img => (
                 <div key={img.id} className="thumb">           
                     <img
@@ -15,3 +15,4 @@ export default function SideContainer({ images, onSelect, customTitles, side }) 
         </div>
     );
 }
+export default SideContainer;
