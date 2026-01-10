@@ -10,8 +10,10 @@ export default function App ()  {
 
 
 useEffect(() => {
+  if(!selectedGallery) return;
+
   async function fetchImages(selectedGallery) {
-    const wikiTitles = selectedGallery.images.map(item => item.wikiTitle)
+    const wikiTitles = selectedGallery.images.map(item =>item.wikiTitle)
     const params =
      "?action=query" + //Hey API I want to ask something
         "&prop=imageinfo" + // prop (properties which ones from the page)
@@ -48,10 +50,10 @@ return (
     <>
         <Header onSelectTopic = {setSelectedGallery} />
 
-        <Main>
+        <main>
           {!selectedGallery && <LandingPage />}
-          {selectedGallery && <Gallery selectedtopic={selectedGallery} />}
-        </Main>
+          {selectedGallery && <Gallery gallery={selectedGallery} />} 
+        </main>
     </>
   );
 }

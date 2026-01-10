@@ -1,14 +1,14 @@
-function SideContainer({ images, onSelect, customTitles, side })    {
+function SideContainer({ images, onSelect, side })    {
     return (
         <div className={side}>
             {images.map(img => (
-                <div key={img.id} className="thumb">           
+                <div key={img.title} className="thumb">           
                     <img
                         src={img.thumb}
                         alt={img.title}
                         onClick={() => onSelect(img)}
                     />
-                    <p className="thumb-title">{customTitles[img.title]} 
+                    <p className="thumb-title">{img.displayTitle} 
                     </p>
                 </div>
             ))}

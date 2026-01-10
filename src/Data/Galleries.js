@@ -17,3 +17,4 @@ const galleries =   {   // objet = { key:value}
         Cognition: cognition,         
         Miscellaneous: miscellaneous,
 };
+export default galleries;
