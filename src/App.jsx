@@ -1,18 +1,27 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import Header from "./components/Header"
-import LandingPage from "./components/LandingPage";
-import Gallery from "./components/Gallery"
+import Header from "./components/Header.jsx"
+import LandingPage from "./components/LandingPage.jsx";
+import Gallery from "./components/Gallery.jsx"
+
+
 
 
 export default function App ()  {
   const [selectedGallery, setSelectedGallery] = useState(null);
+  const [images, setImages] = useState([])
 
 
 useEffect(() => {
   if(!selectedGallery) return;
+  /*console.log("Gallery", selectedGallery) 
 
-  async function fetchImages(selectedGallery) {
+  if(!Array.isArray(selectedGallery.images))  {
+    console.error("image is not an array", selectedGallery); 
+    return
+  }*/
+
+  async function fetchImages() {
     const wikiTitles = selectedGallery.images.map(item =>item.wikiTitle)
     const params =
      "?action=query" + //Hey API I want to ask something
@@ -30,11 +39,16 @@ useEffect(() => {
     const data = await res.json();
 
     const normalizedImages = Object.values(data.query.pages)
-      .map(page => {
+      .map((page, index) => {
             const info = page.imageinfo[0];
+    
+    const meta = selectedGallery.images.find(
+      item => item.wikiTitle === page.title);
+
           return {
             id: page.pageid,
-            title: page.title.replace("File:", ""),
+            wikititle:meta.wikiTitle,
+            displayTitle:meta.displayTitle,
             thumb: info.thumburl,
             full: info.url
         };
@@ -51,8 +65,8 @@ return (
         <Header onSelectTopic = {setSelectedGallery} />
 
         <main>
-          {!selectedGallery && <LandingPage />}
-          {selectedGallery && <Gallery gallery={selectedGallery} />} 
+          {!selectedGallery && <LandingPage />} 
+          {selectedGallery && <Gallery gallery={selectedGallery} images={images} />} 
         </main>
     </>
   );

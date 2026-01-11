@@ -1,12 +1,15 @@
-# React + Vite
+The Nervous System Gallery ia an interactive React-based educational gallery desined to help visualize and study neurological images using cientific images from Wikimedia Commons. This project focuses on clarity, accessibility, and clean data handling, transforming a complex external API into a structured, user-friendly learning tool.
+Images are fetched dynamically using the Wikimedia Commons API with selective parameters to request only the necessary data.Instead of rendering the raw API response, the data is normalized into a clean structure.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project demonstrates:
 
-Currently, two official plugins are available:
+    - Fetching and handling complex external APIs
+    - Using URL parameters to control API responses
+    - Normalizing data before storing it in state
+    - Managing side effects with useEffect
+    - Building accessible UI components
+    - Debugging real-world React and CSS issues
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Author:
+Paola Campos
+Full‑stack developer in training, focused on frontend architecture, accessibility, and real‑world API integration.

@@ -1,16 +1,22 @@
-function SideContainer({ images, onSelect, side })    {
+
+function SideContainer({ images, onSelect })    {
+    //(!images)return null;
+
     return (
-        <div className={side}>
+        <div className="thumb-cont">
             {images.map(img => (
-                <div key={img.title} className="thumb">           
-                    <img
+                <button key={img.id} className="thumb"> 
+
+                    <p className="thumb-title">{img.displayTitle} 
+                    </p>  
+
+                    <img className="thumb-image"
                         src={img.thumb}
-                        alt={img.title}
+                        alt={img.displayTitle}
                         onClick={() => onSelect(img)}
                     />
-                    <p className="thumb-title">{img.displayTitle} 
-                    </p>
-                </div>
+                    
+                </button>
             ))}
         </div>
     );
