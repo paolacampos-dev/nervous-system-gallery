@@ -2,7 +2,7 @@ function LandingPage()  {
     return(
         <div className="landing">
             <h1>Neurological Gallery</h1>
-            <p>Select a topic to begin</p>
+            <p className="landing-p">Select a topic to begin</p>
         </div>
     )
 }

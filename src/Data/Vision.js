@@ -1,9 +1,6 @@
 const vision =    {
     galleryTitle: "Vision",
 
-    leftColumnTitle: "Optical/retinal images",
-    rightColumnTitle: "Cortical images",
-
     images : [
         {
         wikiTitle: "File:1420 Optical Fields.jpg",
@@ -22,6 +19,6 @@ const vision =    {
         displayTitle: "Ventral & Dorsal",
         },
     ],
-}
+};
 
 export default vision;

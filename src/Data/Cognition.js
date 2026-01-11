@@ -1,9 +1,6 @@
 const cognition = {
     galleryTitle: "Cognition",
 
-    leftColumnTitle: "-",
-    rightColumnTitle: "-",
-
     images: [
         {
         wikiTitle: "File:Esferas_del_Ser.png",
@@ -20,10 +17,6 @@ const cognition = {
         {
         wikiTitle: "File:Carl_Jung.jpg",
         displayTitle: "Carl Jung",
-        },
-        {
-        wikiTitle: "File:Diagram_of_Freud%27s_Psychoanalytic_Theory_of_Personality_.webp",
-        displayTitle: "Freud",
         },
         {
         wikiTitle: "File:Circuits-for-imaginations.png",

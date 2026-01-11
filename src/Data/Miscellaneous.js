@@ -1,13 +1,10 @@
 const miscellaneous = {
     galleryTitle: "Miscellaneous",
 
-    leftColumnTitle: "-",
-    rightColumnTitle: "-",
-
     images: [
         {
         wikiTitle: "File:DrPaulineNeveu 03 Axe hypothalamus hypophyse.png",
-        displayTitle: "Hypothalamic–Pituitary Axis",
+        displayTitle: "Hypothalamic/Pituitary Axis",
         },
         {
         wikiTitle: "File:DrPaulineNeveu 03 Hypothalamus epaisseur noyaux.svg",
@@ -31,7 +28,7 @@ const miscellaneous = {
         },
         {
         wikiTitle: "File:Diagram of a Timm-stained cross-section of the hippocampus.JPEG",
-        displayTitle: "Hippocampal Cross-Section (Timm Staining)",
+        displayTitle: "Hippocampal Cross-Sectio",
         },
         {
         wikiTitle: "File:Human subventricular zone.jpg",
@@ -45,7 +42,7 @@ const miscellaneous = {
         wikiTitle: "File:Animal Cell Structure.png",
         displayTitle: "Animal Cell Structure",
         },
-    ] ,
+    ],
 };
 
 export default miscellaneous;

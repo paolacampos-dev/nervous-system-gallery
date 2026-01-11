@@ -3,16 +3,16 @@ function CenterContainer({ selected })   {
 <div className="center">
             {selected ? (
             <div className="center-content">
+                <p className="center-title">{selected.displayTitle}
+                </p>
                 <img
                     className="magnifier"
                     src={selected.full}
-                    alt={selected.title}
+                    alt={selected.displayTitle}
                 />
-                <p className="center-title">{selected.displayTitle}
-                </p>
             </div>
             ) : (
-            <p>Select an image</p>
+            <p className="center-p">Select an image</p>
             )}
         </div>
     )

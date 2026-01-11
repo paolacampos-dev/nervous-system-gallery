@@ -1,9 +1,6 @@
 const emotion = {
     galleryTitle: "Emotion",
 
-    leftColumnTitle: "-",
-    rightColumnTitle: "-",
-
     images: [
     {
         wikiTitle: "File:Neural systems proposed to process emotion.png",
